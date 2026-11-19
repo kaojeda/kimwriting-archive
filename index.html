@@ -56,8 +56,13 @@
     .section-heading:first-of-type {
       margin-top: 0;
     }
-    .article-card {
-      display: block;
+    article-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
       background: #ffffff;
       border: 1.5px solid #1a1a1a;
       border-radius: 12px;
@@ -70,6 +75,10 @@
     .article-card:hover {
       transform: translateY(-2px);
       box-shadow: 4px 4px 0px #1a1a1a;
+    }
+    .article-content {
+      position: relative;
+      z-index: 2;
     }
     .article-title {
       font-weight: 700;
@@ -93,17 +102,21 @@
   <main>
     <h2 class="section-heading">Features</h2>
 
-    <a class="article-card" href="bears-of-joy.html">
-      <span class="article-title">'Bears of Joy' bring smiles, warmth ↗</span>
-      <span class="article-meta">Daily Tribune • Feature / Community</span>
-    </a>
+   <a class="article-card" href="bears-of-joy.html">
+  <div class="article-content">
+    <span class="article-title">'Bears of Joy' bring smiles, warmth ↗</span>
+    <span class="article-meta">Daily Tribune • Feature / Community</span>
+  </div>
+  <img class="article-thumb" src="https://images.assettype.com/tribune/2024-11-10/x0wdjifa/sm-bears2.jpg?w=720&auto=format&q=55&rect=0%2C236%2C1080%2C608&h=405&fit=crop" alt="Bears of Joy" />
+</a>
 
-    <!-- Copy and paste the block below when you want to start a new category:
-    <h2 class="section-heading">News & Beat Coverage</h2>
-
+    <!-- Copy and paste the block below when you want to add a new article:
     <a class="article-card" href="your-next-article.html">
-      <span class="article-title">Article Headline Here ↗</span>
-      <span class="article-meta">Daily Tribune • News</span>
+      <div class="article-content">
+        <span class="article-title">Article Headline Here ↗</span>
+        <span class="article-meta">Daily Tribune • News</span>
+      </div>
+      <img class="article-thumb" src="your-image.jpg" alt="Article preview" />
     </a>
     -->
   </main>
